@@ -40,7 +40,6 @@ homozygous_3.data <- Read10X(data.dir = "E:/AMIN HDD/STUDY MATERIALS/UNIVERSITY 
 homozygous_3 <- CreateSeuratObject(counts = homozygous_3.data, project = "3 Weeks Homozygous", min.cells = 3, min.features = 200)
 homozygous_3
 
-
 # Create Seurat Object 
 wt   <- CreateSeuratObject(wt.data, project = "wt")
 homozygous   <- CreateSeuratObject(homozygous.data, project = "homozygous_5")
@@ -85,6 +84,7 @@ wt
 homozygous
 homozygous_3
 
+# create a list to combine all models
 combined <- list()
 
 combined [["wt"]] <- wt
@@ -181,7 +181,7 @@ FeaturePlot(combined_seurat, features = c("Cd68", "Cdca3", "C1qb"))
 FeaturePlot(combined_seurat, features = c("H2-Ab1", "Stmn1", "Mki67"))
 FeaturePlot(combined_seurat, features = c("Neat1", "Cd79a"))
 
-
+# Check the gene expression in each clusters
 plots <-VlnPlot(combined_seurat, features = c("Neat1"), split.by = "orig.ident", pt.size = 0)
 wrap_plots(plots = plots, ncol = 1)
 
