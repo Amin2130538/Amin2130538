@@ -161,29 +161,26 @@ top20
 
 # check the marker genes in each clusters
 
-FeaturePlot(combined_seurat, features = c("Pecam1", "Cdh5", "Cldn5")) # Cluster 10 
+FeaturePlot(combined_seurat, features = c("Pecam1", "Cdh5", "Cldn5")) 
 
-FeaturePlot(combined_seurat, features = c("Cd3d", "Cd3g","Cd28")) # Cluster 9
+FeaturePlot(combined_seurat, features = c("Cd3d", "Cd3g","Cd28")) 
 
-FeaturePlot(combined_seurat, features = c("Cd79a", "Ly6d","Cd79b")) #EC Cluster not sure
+FeaturePlot(combined_seurat, features = c("Cd79a", "Ly6d","Cd79b")) 
 
-FeaturePlot(combined_seurat, features = c("Klrd1", "Flt3","H2-Ab1",)) #EC Cluster Den
+FeaturePlot(combined_seurat, features = c("Klrd1", "Flt3","H2-Ab1",)) 
+FeaturePlot(combined_seurat, features = c("Cd3g", "Gzma"))
+FeaturePlot(combined_seurat, features = c("S100a8", "S100a9", "Cxcr4")) 
+FeaturePlot(combined_seurat, features = c("Myh11", "Tagln", "Acta2")) 
 
-FeaturePlot(combined_seurat, features = c("Cd3g", "Gzma")) #EC Cluster NK
+FeaturePlot(combined_seurat, features = c("Dcn", "Lum", "Col1a1"))
 
-FeaturePlot(combined_seurat, features = c("S100a8", "S100a9", "Cxcr4")) #EC Cluster Neu
+FeaturePlot(combined_seurat, features = c("Lyz2", "Pf4", "Mrc1", "Il1b")) 
 
-FeaturePlot(combined_seurat, features = c("Myh11", "Tagln", "Acta2")) #EC Cluster SMC
+FeaturePlot(combined_seurat, features = c("Cd68", "Cdca3", "C1qb")) 
 
-FeaturePlot(combined_seurat, features = c("Dcn", "Lum", "Col1a1")) #EC Cluster fibro
+FeaturePlot(combined_seurat, features = c("H2-Ab1", "Stmn1", "Mki67"))
+FeaturePlot(combined_seurat, features = c("Neat1", "Cd79a"))
 
-FeaturePlot(combined_seurat, features = c("Lyz2", "Pf4", "Mrc1", "Il1b")) #EC Cluster fibro
-
-FeaturePlot(combined_seurat, features = c("Cd68", "Cdca3", "C1qb")) #EC Cluster fibro
-
-FeaturePlot(combined_seurat, features = c("H2-Ab1", "Stmn1", "Mki67")) #EC Cluster fibro
-
-FeaturePlot(combined_seurat, features = c("Neat1", "Cd79a")) #EC Cluster fibro
 
 plots <-VlnPlot(combined_seurat, features = c("Neat1"), split.by = "orig.ident", pt.size = 0)
 wrap_plots(plots = plots, ncol = 1)
